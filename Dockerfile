@@ -24,7 +24,7 @@ RUN curl -O https://s3-us-west-2.amazonaws.com/dynamodb-local/dynamodb_local_${D
     rm dynamodb_local_${DYNAMODB_VERSION}.tar.gz
 
 
-ENTRYPOINT ["/usr/bin/java", "-Djava.library.path=.", "-jar", "DynamoDBLocal.jar", "-dbPath", "/var/dynamodb_local"]
+ENTRYPOINT ["/usr/bin/java", "-Djava.library.path=.", "-jar", "DynamoDBLocal.jar", "-dbPath", "/var/dynamodb_local" , "-inMemory"]
 
 EXPOSE 8000
 
