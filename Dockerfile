@@ -1,6 +1,6 @@
 FROM openjdk:8-jre
 
-RUN curl -sL https://deb.nodesource.com/setup_6.x -o /opt/nodesource_setup.sh
+RUN curl -sL https://deb.nodesource.com/setup_12.x -o /opt/nodesource_setup.sh
 RUN bash /opt/nodesource_setup.sh
 RUN apt-get install -y build-essential
 RUN apt-get install -y nodejs
